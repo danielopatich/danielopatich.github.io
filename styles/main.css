@@ -183,7 +183,7 @@ main {
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
-  height: 250px;
+  height: auto;
   border: 2px solid #212121;
   text-align: justify; }
   .About:last-child {
@@ -201,8 +201,9 @@ main {
   margin-right: 2.35765%;
   width: 48.82117%;
   text-align: justify;
-  height: 250px;
-  border: 2px solid #212121; }
+  height: auto;
+  border: 2px solid #212121;
+  margin-bottom: 20px; }
   .About2:last-child {
     margin-right: 0; }
   .About2 h2 {
@@ -475,7 +476,7 @@ footer {
     display: block;
     margin-right: 2.35765%;
     width: 100%;
-    height: 600px; }
+    height: auto; }
     .break1:last-child {
       margin-right: 0; } }
 
@@ -651,7 +652,7 @@ footer {
     display: block;
     margin-right: 2.35765%;
     width: 100%;
-    height: 600px; }
+    height: auto; }
     .break1:last-child {
       margin-right: 0; } }
 
