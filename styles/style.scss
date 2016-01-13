@@ -81,7 +81,7 @@ header.head {
 }
 
 header.head {
-  @include media($between) {
+  @include media ($between) {
     ul.iconRight {
       height: 129px;
       display: inline-block;
@@ -445,6 +445,7 @@ footer {
   display: block;
   background: #ccc;
   width: 100%;
+  margin-top: 50px;
 }
 
 .navFoot {
@@ -618,9 +619,16 @@ main {
 
 .navFoot {
   @include media($tablet) {
+    width: 80%;
     ul.iconRightBottom {
     margin: 0;
     }
+  }
+}
+
+.navFoot {
+  @include media($between) {
+    width: 80%;
   }
 }
 
@@ -739,6 +747,7 @@ main {
 
 .navFoot {
   @include media($mobile) {
+    width: 85%;
     .iconRightBottom {
     margin-bottom: 20px
     }

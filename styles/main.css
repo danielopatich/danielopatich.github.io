@@ -400,7 +400,8 @@ main {
 footer {
   display: block;
   background: #ccc;
-  width: 100%; }
+  width: 100%;
+  margin-top: 50px; }
 
 .navFoot {
   width: 100%; }
@@ -587,8 +588,14 @@ footer {
       margin-right: 0; } }
 
 @media screen and (max-width: 768px) {
-  .navFoot ul.iconRightBottom {
-    margin: 0; } }
+  .navFoot {
+    width: 80%; }
+    .navFoot ul.iconRightBottom {
+      margin: 0; } }
+
+@media screen and (max-width: 600px) {
+  .navFoot {
+    width: 80%; } }
 
 @media screen and (max-width: 480px) {
   .mainWrap {
@@ -729,5 +736,7 @@ footer {
       margin-right: 0; } }
 
 @media screen and (max-width: 480px) {
-  .navFoot .iconRightBottom {
-    margin-bottom: 20px; } }
+  .navFoot {
+    width: 85%; }
+    .navFoot .iconRightBottom {
+      margin-bottom: 20px; } }
