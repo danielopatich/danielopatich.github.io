@@ -48,19 +48,21 @@ header.head {
       height: 28px;
       margin: -3.5px 0px 0px 8px; }
 
-.navHead ul {
-  display: inline-flex;
-  list-style-type: none; }
-  .navHead ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 0 10px; }
-  .navHead ul li a:hover {
-    color: #ABC278;
-    text-decoration: underline;
-    background: #fff;
-    height: 10px;
-    transition: all 0.5s ease; }
+.navHead {
+  width: 100%; }
+  .navHead ul {
+    display: inline-flex;
+    list-style-type: none; }
+    .navHead ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 0 10px; }
+    .navHead ul li a:hover {
+      color: #ABC278;
+      text-decoration: underline;
+      background: #fff;
+      height: 10px;
+      transition: all 0.5s ease; }
 
 @media screen and (max-width: 600px) {
   header.head ul.iconRight {
@@ -70,16 +72,33 @@ header.head {
     margin: 0; } }
 
 @media screen and (max-width: 480px) {
-  header.head ul.iconRight {
-    height: 118px;
-    display: inline-block;
-    padding: 4.3px 4px; }
-  header.head img {
-    margin: 0; } }
+  header.head {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    header.head::after {
+      clear: both;
+      content: "";
+      display: table; }
+    header.head:last-child {
+      margin-right: 0; }
+    header.head ul.iconRight {
+      height: 33px;
+      display: -webkit-inline-box;
+      padding: 4.3px 40px;
+      margin-top: -16px; }
+    header.head img {
+      margin: 0; }
+    header.head li {
+      width: 25%; } }
 
 @media screen and (max-width: 480px) {
   header.head ul {
-    width: 16.5%; } }
+    width: 100%; } }
 
 @media screen and (max-width: 480px) {
   .navHead ul {
@@ -91,7 +110,8 @@ header.head {
       text-decoration: none;
       color: #fff;
       padding: 0 8px;
-      font-size: 12px; }
+      font-size: 15px;
+      margin-left: 10px; }
     .navHead ul li a:hover {
       color: #ABC278;
       text-decoration: underline;
@@ -515,8 +535,9 @@ footer {
 
 @media screen and (max-width: 480px) {
   .top h1 {
-    margin-left: -35px;
-    font-size: 42px; } }
+    margin-left: 0;
+    font-size: 32px;
+    margin-top: 25px; } }
 
 @media screen and (max-width: 768px) {
   .Resume {
