@@ -133,7 +133,7 @@ header.head {
           color: #fff;
           padding: 0 8px;
           font-size: 15px;
-          margin-left: 10px;
+          margin-left: 5px;
         }
         a:hover {
           color: #ABC278;
@@ -208,7 +208,7 @@ main {
 
 .break1 {
   max-width: 100%;
-  height: 300px;
+  height: 400px;
   background-image: url('../imgs/pine_path.jpg');
   background-position: 50% 49.5555555%;
   background-size: cover;
@@ -233,28 +233,36 @@ main {
 
 .About {
   width: auto;
-  background: rgba(56, 61, 46, .7);
+  background: rgba(75, 86, 82, .6);
   color: #fff;
   @include span-columns(6 of 12);
   height: auto;
   border: 2px solid #212121;
   text-align: justify;
+  @include outer-container;
   h2 {
     box-shadow: 285px 130px 2px -15px #212121;
     text-align: center;
     // border-bottom: 1px solid #212121;
+  }
+  ul {
+    @include span-columns(6);
+    font-size: 19.9px;
+    display: block;
+    li {
+    }
   }
 }
 
 .About2 {
   width: auto;
   background: rgba(75, 86, 82, .6);
-  color: rgba(216, 216, 206, 1);
+  color: #fff;
   @include span-columns(6 of 12);
-  text-align: justify;
   height: auto;
   border: 2px solid #212121;
-  margin-bottom: 20px;
+  text-align: justify;
+  @include outer-container;
   h2 {
     text-align: center;
   }
@@ -262,8 +270,9 @@ main {
 
 .About2 {
   p {
+    @include span-columns(12);
     padding: 0px 30px;
-    font-size: 15px;
+    font-size: 16.3px;
     text-align: justify;
   }
 }
@@ -278,7 +287,8 @@ main {
 
 .Resume {
   @include outer-container;
-  @include span-columns(4 of 12);
+  @include span-columns(5 of 12);
+  @include shift(1);
   background: rgba(52, 61, 55, .8);
   border: 1px solid #D7D7CD;
   a {
@@ -318,15 +328,15 @@ main {
 }
 
 .Github {
-  @include span-columns(4 of 12);
+  @include span-columns(12 of 12);
   border: 1px solid #D7D7CD;
   background: rgba(52, 61, 55, 1);
   img {
     border-radius: 0.9555%;
-    width: 92%;
+    width: 22%;
     opacity: 0.8;
     border: none;
-    height: auto;
+    /* height: auto; */
     /* margin-right: 20px; */
     margin: 10px 10px;
     /* float: left; */
@@ -337,6 +347,7 @@ main {
     border: 1px solid #ABC278;
     margin: 15px;
     background: #fff;
+    font-size: 36px;
   }
   h5 {
     color: #fff;
@@ -351,10 +362,22 @@ main {
       background: #212121;
     }
   }
+  ul {
+    @include outer-container;
+    list-style-type: none;
+    li {
+      @include span-columns(5);
+      @include shift(0);
+      margin-left: 5%;
+      border-left: 1px solid #92B961;
+      margin-bottom: 5%;
+    }
+  }
 }
 
 .Github {
   img {
+    width: 40%;
   }
   img:hover {
     transition: all 0.9s ease;
@@ -364,7 +387,7 @@ main {
 }
 
 .audio {
-  @include span-columns(4 of 12);
+  @include span-columns(5 of 12);
   border: 1px solid #D7D7CD;
   background: rgba(52, 61, 55, 1);
   .soundcloudWrap {
@@ -374,9 +397,9 @@ main {
     color: #fff;
   }
   p {
-    text-align: justify;
     padding: 0 10px;
-    font-size: 16px;
+    font-size: 18px;
+    margin-bottom: 38px;
   }
   h2 {
     text-align: center;
@@ -398,9 +421,12 @@ main {
   @include outer-container;
   display: inline-block;
   h6 {
+    box-shadow: -3px 10px 3px -9px #9BB961;
     font-size: 15px;
     border-left: 1px solid #ABC278;
-    margin: 10px;
+    @include span-columns(10);
+    margin-bottom: 0;
+    margin-top: 10px;
     a {
       color: #B1C278;
     }
@@ -419,7 +445,6 @@ main {
 }
 
 .contactWrap {
-  // @include outer-container;
   @include span-columns(4 of 12);
   @include shift(0);
   position: absolute;
@@ -431,6 +456,25 @@ main {
   padding: 0px 24px;
   margin-bottom: 25px;
   border-left: none;
+  @include outer-container;
+  h2 {
+    font-size: 22px;
+    padding: 10px;
+    background: rgba(33, 33, 33, 0.68);
+    border: 1px solid #fff;
+    animation: pulse 4s infinite;
+    margin-bottom: 0;
+  }
+  @keyframes pulse {
+    0% {
+      background-color: #212121;
+    }
+    100% {
+      background-color: rgba(150, 180, 168, 0.68);
+      color: #212121;
+      border: 1px solid #9BB961;
+    }
+  }
 }
 
 .contactWrap {
@@ -453,10 +497,10 @@ footer {
   display: block;
   background: #ccc;
   width: 100%;
-  margin-top: 50px;
 }
 
 .navFoot {
+  @include outer-container;
   width: 100%;
   ul.iconRightBottom {
     display: inline-flex;
@@ -477,7 +521,6 @@ footer {
       width: 50px;
       border: 0;
       height: 48px;
-      margin: 6.5px 15px 10px 15px;
     }
     li {
       width: 25%;
@@ -541,7 +584,7 @@ main {
   @include media($tablet) {
     @include span-columns(12);
     float: none;
-    box-shadow: -110px -51px 20px 48px #212121;
+    box-shadow: none;
     h1 {
       @include span-columns(12);
       color: rgba(215, 215, 205, .8);
@@ -565,7 +608,7 @@ main {
 .Resume {
   @include media($tablet) {
     @include span-columns(6 of 12);
-    @include shift(3);
+    margin-left: 0;
     margin-top: 20px;
     margin-bottom: 20px;
     background: rgba(52, 61, 55, .8);
@@ -575,8 +618,8 @@ main {
 
 .Github {
   @include media($tablet) {
-    @include span-columns(6 of 12);
-    @include shift(3);
+    @include span-columns(10 of 12);
+    @include shift(1);
     border: 1px solid #D7D7CD;
     background: rgba(52, 61, 55, 1);
   }
@@ -585,12 +628,10 @@ main {
 .audio {
   @include media($tablet) {
     @include span-columns(6 of 12);
-    @include shift(3);
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: 1px solid #D7D7CD;
     background: rgba(52, 61, 55, 1);
-  }
-  p {
-    font-size: 12px;
   }
 }
 
@@ -628,7 +669,7 @@ main {
 
 .navFoot {
   @include media($tablet) {
-    width: 80%;
+    width: 100%;
     ul.iconRightBottom {
       margin: 0;
     }
@@ -637,7 +678,7 @@ main {
 
 .navFoot {
   @include media($between) {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -675,7 +716,7 @@ main {
   @include media($mobile) {
     @include span-columns(12);
     p {
-      font-size: 14px;
+      font-size: 15px;
       padding: 10px 20px;
       text-align: justify;
     }
@@ -716,6 +757,19 @@ main {
     margin-top: 20px;
     border: 1px solid #D7D7CD;
     background: rgba(52, 61, 55, 1);
+    img {
+
+    }
+    ul {
+      @include outer-container;
+      list-style-type: none;
+      li {
+        @include span-columns(11);
+        @include shift(0);
+        border-left: 1px solid #92B961;
+        margin-bottom: 5%;
+      }
+    }
   }
 }
 
@@ -733,6 +787,10 @@ main {
 
 .Contact {
   @include media($mobile) {
+    img {
+      width: 154.2%;
+    }
+    margin-bottom: 170px;
     @include span-columns(6);
     @include shift(1);
   }
@@ -756,9 +814,6 @@ main {
 
 .navFoot {
   @include media($mobile) {
-    width: 85%;
-    .iconRightBottom {
-      margin-bottom: 20px
-    }
+    width: 100%;
   }
 }

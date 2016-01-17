@@ -111,7 +111,7 @@ header.head {
       color: #fff;
       padding: 0 8px;
       font-size: 15px;
-      margin-left: 10px; }
+      margin-left: 5px; }
     .navHead ul li a:hover {
       color: #ABC278;
       text-decoration: underline;
@@ -174,7 +174,7 @@ main {
 
 .break1 {
   max-width: 100%;
-  height: 300px;
+  height: 400px;
   background-image: url("../imgs/pine_path.jpg");
   background-position: 50% 49.5555555%;
   background-size: cover;
@@ -197,7 +197,7 @@ main {
 
 .About {
   width: auto;
-  background: rgba(56, 61, 46, 0.7);
+  background: rgba(75, 86, 82, 0.6);
   color: #fff;
   float: left;
   display: block;
@@ -205,34 +205,62 @@ main {
   width: 48.82117%;
   height: auto;
   border: 2px solid #212121;
-  text-align: justify; }
+  text-align: justify;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
   .About:last-child {
     margin-right: 0; }
+  .About::after {
+    clear: both;
+    content: "";
+    display: table; }
   .About h2 {
     box-shadow: 285px 130px 2px -15px #212121;
     text-align: center; }
+  .About ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    font-size: 19.9px;
+    display: block; }
+    .About ul:last-child {
+      margin-right: 0; }
 
 .About2 {
   width: auto;
   background: rgba(75, 86, 82, 0.6);
-  color: #d8d8ce;
+  color: #fff;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
-  text-align: justify;
   height: auto;
   border: 2px solid #212121;
-  margin-bottom: 20px; }
+  text-align: justify;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
   .About2:last-child {
     margin-right: 0; }
+  .About2::after {
+    clear: both;
+    content: "";
+    display: table; }
   .About2 h2 {
     text-align: center; }
 
 .About2 p {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
   padding: 0px 30px;
-  font-size: 15px;
+  font-size: 16.3px;
   text-align: justify; }
+  .About2 p:last-child {
+    margin-right: 0; }
 
 .About p {
   padding: 0px 30px;
@@ -246,7 +274,8 @@ main {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%;
+  width: 40.29137%;
+  margin-left: 8.5298%;
   background: rgba(52, 61, 55, 0.8);
   border: 1px solid #D7D7CD; }
   .Resume::after {
@@ -288,17 +317,17 @@ main {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%;
+  width: 100%;
   border: 1px solid #D7D7CD;
   background: #343d37; }
   .Github:last-child {
     margin-right: 0; }
   .Github img {
     border-radius: 0.9555%;
-    width: 92%;
+    width: 22%;
     opacity: 0.8;
     border: none;
-    height: auto;
+    /* height: auto; */
     /* margin-right: 20px; */
     margin: 10px 10px;
     /* float: left; */ }
@@ -307,7 +336,8 @@ main {
     color: #212121;
     border: 1px solid #ABC278;
     margin: 15px;
-    background: #fff; }
+    background: #fff;
+    font-size: 36px; }
   .Github h5 {
     color: #fff;
     text-align: center;
@@ -318,6 +348,29 @@ main {
     .Github a :hover {
       color: #fff;
       background: #212121; }
+  .Github ul {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none; }
+    .Github ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .Github ul li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%;
+      margin-left: 0%;
+      margin-left: 5%;
+      border-left: 1px solid #92B961;
+      margin-bottom: 5%; }
+      .Github ul li:last-child {
+        margin-right: 0; }
+
+.Github img {
+  width: 40%; }
 
 .Github img:hover {
   transition: all 0.9s ease;
@@ -328,7 +381,7 @@ main {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%;
+  width: 40.29137%;
   border: 1px solid #D7D7CD;
   background: #343d37; }
   .audio:last-child {
@@ -338,9 +391,9 @@ main {
   .audio h2, .audio p {
     color: #fff; }
   .audio p {
-    text-align: justify;
     padding: 0 10px;
-    font-size: 16px; }
+    font-size: 18px;
+    margin-bottom: 38px; }
   .audio h2 {
     text-align: center;
     color: #212121;
@@ -363,9 +416,17 @@ main {
     content: "";
     display: table; }
   .Contact h6 {
+    box-shadow: -3px 10px 3px -9px #9BB961;
     font-size: 15px;
     border-left: 1px solid #ABC278;
-    margin: 10px; }
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-bottom: 0;
+    margin-top: 10px; }
+    .Contact h6:last-child {
+      margin-right: 0; }
     .Contact h6 a {
       color: #B1C278; }
   .Contact img {
@@ -393,9 +454,31 @@ main {
   margin-top: 25px;
   padding: 0px 24px;
   margin-bottom: 25px;
-  border-left: none; }
+  border-left: none;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
   .contactWrap:last-child {
     margin-right: 0; }
+  .contactWrap::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .contactWrap h2 {
+    font-size: 22px;
+    padding: 10px;
+    background: rgba(33, 33, 33, 0.68);
+    border: 1px solid #fff;
+    animation: pulse 4s infinite;
+    margin-bottom: 0; }
+
+@keyframes pulse {
+  0% {
+    background-color: #212121; }
+  100% {
+    background-color: rgba(150, 180, 168, 0.68);
+    color: #212121;
+    border: 1px solid #9BB961; } }
 
 @media screen and (max-width: 768px) {
   .contactWrap {
@@ -422,11 +505,17 @@ main {
 footer {
   display: block;
   background: #ccc;
-  width: 100%;
-  margin-top: 50px; }
+  width: 100%; }
 
 .navFoot {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%; }
+  .navFoot::after {
+    clear: both;
+    content: "";
+    display: table; }
   .navFoot ul.iconRightBottom {
     display: inline-flex;
     list-style-type: none;
@@ -440,8 +529,7 @@ footer {
     .navFoot ul.iconRightBottom img {
       width: 50px;
       border: 0;
-      height: 48px;
-      margin: 6.5px 15px 10px 15px; }
+      height: 48px; }
     .navFoot ul.iconRightBottom li {
       width: 25%; }
 
@@ -518,7 +606,7 @@ footer {
     margin-right: 2.35765%;
     width: 100%;
     float: none;
-    box-shadow: -110px -51px 20px 48px #212121; }
+    box-shadow: none; }
     .top:last-child {
       margin-right: 0; }
     .top h1 {
@@ -545,7 +633,7 @@ footer {
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    margin-left: 25.58941%;
+    margin-left: 0;
     margin-top: 20px;
     margin-bottom: 20px;
     background: rgba(52, 61, 55, 0.8);
@@ -558,8 +646,8 @@ footer {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 25.58941%;
+    width: 82.94039%;
+    margin-left: 8.5298%;
     border: 1px solid #D7D7CD;
     background: #343d37; }
     .Github:last-child {
@@ -571,14 +659,12 @@ footer {
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    margin-left: 25.58941%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: 1px solid #D7D7CD;
     background: #343d37; }
     .audio:last-child {
       margin-right: 0; } }
-
-.audio p {
-  font-size: 12px; }
 
 @media screen and (max-width: 768px) {
   .Contact {
@@ -612,13 +698,13 @@ footer {
 
 @media screen and (max-width: 768px) {
   .navFoot {
-    width: 80%; }
+    width: 100%; }
     .navFoot ul.iconRightBottom {
       margin: 0; } }
 
 @media screen and (max-width: 600px) {
   .navFoot {
-    width: 80%; } }
+    width: 100%; } }
 
 @media screen and (max-width: 480px) {
   .mainWrap {
@@ -663,7 +749,7 @@ footer {
     .About2:last-child {
       margin-right: 0; }
     .About2 p {
-      font-size: 14px;
+      font-size: 15px;
       padding: 10px 20px;
       text-align: justify; } }
 
@@ -713,7 +799,26 @@ footer {
     border: 1px solid #D7D7CD;
     background: #343d37; }
     .Github:last-child {
-      margin-right: 0; } }
+      margin-right: 0; }
+    .Github ul {
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto;
+      list-style-type: none; }
+      .Github ul::after {
+        clear: both;
+        content: "";
+        display: table; }
+      .Github ul li {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 91.4702%;
+        margin-left: 0%;
+        border-left: 1px solid #92B961;
+        margin-bottom: 5%; }
+        .Github ul li:last-child {
+          margin-right: 0; } }
 
 @media screen and (max-width: 480px) {
   .audio {
@@ -731,11 +836,14 @@ footer {
 
 @media screen and (max-width: 480px) {
   .Contact {
+    margin-bottom: 170px;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
     margin-left: 8.5298%; }
+    .Contact img {
+      width: 154.2%; }
     .Contact:last-child {
       margin-right: 0; } }
 
@@ -760,6 +868,4 @@ footer {
 
 @media screen and (max-width: 480px) {
   .navFoot {
-    width: 85%; }
-    .navFoot .iconRightBottom {
-      margin-bottom: 20px; } }
+    width: 100%; } }
