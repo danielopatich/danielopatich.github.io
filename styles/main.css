@@ -31,7 +31,7 @@ header.head {
   header.head ul {
     background: #212121;
     height: 40px;
-    padding: 10px;
+    padding: 10px 0;
     border-right: 2px solid #A3C278;
     margin-top: -1px; }
   header.head ul.iconRight {
@@ -152,7 +152,7 @@ main {
     font-weight: bold;
     text-align: center;
     margin: 0;
-    font-size: 128px;
+    font-size: 126px;
     color: rgba(215, 215, 205, 0.9); }
 
 .profPic {
@@ -357,6 +357,16 @@ main {
       clear: both;
       content: "";
       display: table; }
+    .Github ul a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 20px; }
+      .Github ul a:last-child {
+        margin-right: 0; }
     .Github ul li {
       float: left;
       display: block;
@@ -364,13 +374,51 @@ main {
       width: 40.29137%;
       margin-left: 0%;
       margin-left: 5%;
-      border-left: 1px solid #92B961;
+      border-bottom: 1px solid #92B961;
       margin-bottom: 5%; }
       .Github ul li:last-child {
         margin-right: 0; }
+      .Github ul li h3 {
+        text-align: center; }
+
+.Github .imgWrap {
+  position: relative; }
+
+.Github .imgDescription {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  position: absolute;
+  top: 10px;
+  height: 300px;
+  font-size: 30px;
+  bottom: 10px;
+  left: 0px;
+  right: 0px;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center; }
+  .Github .imgDescription:last-child {
+    margin-right: 0; }
+  .Github .imgDescription span:hover {
+    color: green; }
+
+.Github .imgWrap:hover .imgDescription {
+  visibility: visible;
+  transition: all 0.5s ease;
+  opacity: 1; }
 
 .Github img {
-  width: 40%; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  height: 300px; }
+  .Github img:last-child {
+    margin-right: 0; }
 
 .Github img:hover {
   transition: all 0.9s ease;
@@ -651,7 +699,76 @@ footer {
     border: 1px solid #D7D7CD;
     background: #343d37; }
     .Github:last-child {
-      margin-right: 0; } }
+      margin-right: 0; }
+    .Github img {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%;
+      height: 300px; }
+      .Github img:last-child {
+        margin-right: 0; }
+    .Github ul {
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto;
+      list-style-type: none; }
+      .Github ul::after {
+        clear: both;
+        content: "";
+        display: table; }
+      .Github ul a {
+        text-align: center;
+        color: #fff;
+        font-size: 20px; }
+      .Github ul li {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        border-bottom: 1px solid #92B961;
+        margin-bottom: 5%; }
+        .Github ul li:last-child {
+          margin-right: 0; }
+        .Github ul li h3 {
+          text-align: center; } }
+
+@media screen and (max-width: 600px) {
+  .Github {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-left: 0%;
+    border: 1px solid #D7D7CD;
+    background: #343d37; }
+    .Github:last-child {
+      margin-right: 0; }
+    .Github ul {
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto;
+      list-style-type: none; }
+      .Github ul::after {
+        clear: both;
+        content: "";
+        display: table; }
+      .Github ul a {
+        text-align: center;
+        color: #fff;
+        font-size: 20px; }
+      .Github ul li {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        border-bottom: 1px solid #92B961;
+        margin-bottom: 5%; }
+        .Github ul li:last-child {
+          margin-right: 0; }
+        .Github ul li h3 {
+          text-align: center; } }
 
 @media screen and (max-width: 768px) {
   .audio {
@@ -735,6 +852,9 @@ footer {
     width: 100%; }
     .About:last-child {
       margin-right: 0; }
+    .About ul {
+      font-size: 14.9px;
+      margin-left: -5px; }
     .About p {
       font-size: 14px;
       padding: 10px 20px;
@@ -800,22 +920,38 @@ footer {
     background: #343d37; }
     .Github:last-child {
       margin-right: 0; }
+    .Github img {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin-left: 0%;
+      height: 240px;
+      width: 100%; }
+      .Github img:last-child {
+        margin-right: 0; }
     .Github ul {
       max-width: 68em;
       margin-left: auto;
       margin-right: auto;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
       list-style-type: none; }
       .Github ul::after {
         clear: both;
         content: "";
         display: table; }
+      .Github ul:last-child {
+        margin-right: 0; }
       .Github ul li {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 91.4702%;
+        width: 82.94039%;
         margin-left: 0%;
-        border-left: 1px solid #92B961;
+        margin-left: 0;
         margin-bottom: 5%; }
         .Github ul li:last-child {
           margin-right: 0; } }

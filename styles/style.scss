@@ -35,7 +35,7 @@ header.head {
     background: #212121;
     // position: absolute;
     height: 40px;
-    padding: 10px;
+    padding: 10px 0;
     border-right: 2px solid #A3C278;
     margin-top: -1px;
   }
@@ -170,7 +170,7 @@ main {
     font-weight: bold;
     text-align: center;
     margin: 0;
-    font-size: 128px;
+    font-size: 126px;
     color: rgba(215, 215, 205, .9);
   }
 }
@@ -365,19 +365,55 @@ main {
   ul {
     @include outer-container;
     list-style-type: none;
+    a {
+      @include span-columns(12);
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+    }
     li {
       @include span-columns(5);
       @include shift(0);
       margin-left: 5%;
-      border-left: 1px solid #92B961;
+      border-bottom: 1px solid #92B961;
       margin-bottom: 5%;
+      h3 {
+        text-align: center;
+      }
     }
   }
 }
 
 .Github {
+  .imgWrap {
+    position: relative;
+  }
+  .imgDescription {
+    @include span-columns(8);
+    @include shift(2);
+    position: absolute;
+    top: 10px;
+    height: 300px;
+    font-size: 30px;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    span:hover {
+      color: green;
+    }
+  }
+  .imgWrap:hover .imgDescription {
+    visibility: visible;
+    transition: all 0.5s ease;
+    opacity: 1;
+  }
   img {
-    width: 40%;
+    @include span-columns(8);
+    @include shift(2);
+    height: 300px;
   }
   img:hover {
     transition: all 0.9s ease;
@@ -622,8 +658,57 @@ main {
     @include shift(1);
     border: 1px solid #D7D7CD;
     background: rgba(52, 61, 55, 1);
+    img {
+      @include span-columns(8);
+      @include shift(2);
+      height: 300px;
+    }
+    ul {
+      @include outer-container;
+      list-style-type: none;
+      a {
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+      }
+      li {
+        @include span-columns(10);
+        border-bottom: 1px solid #92B961;
+        margin-bottom: 5%;
+        h3 {
+          text-align: center;
+        }
+      }
+    }
   }
 }
+
+.Github {
+  @include media($between) {
+    @include span-columns(12 of 12);
+    @include shift(0);
+    border: 1px solid #D7D7CD;
+    background: rgba(52, 61, 55, 1);
+    ul {
+      @include outer-container;
+      list-style-type: none;
+      a {
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+      }
+      li {
+        @include span-columns(10);
+        border-bottom: 1px solid #92B961;
+        margin-bottom: 5%;
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
 
 .audio {
   @include media($tablet) {
@@ -703,6 +788,10 @@ main {
 .About {
   @include media($mobile) {
     @include span-columns(12);
+    ul {
+      font-size: 14.9px;
+      margin-left: -5px;
+    }
     p {
       font-size: 14px;
       padding: 10px 20px;
@@ -758,15 +847,19 @@ main {
     border: 1px solid #D7D7CD;
     background: rgba(52, 61, 55, 1);
     img {
-
+      @include span-columns(12);
+      @include shift(0);
+      height: 240px;
+      width: 100%;
     }
     ul {
       @include outer-container;
+      @include span-columns(12);
       list-style-type: none;
       li {
-        @include span-columns(11);
+        @include span-columns(10);
         @include shift(0);
-        border-left: 1px solid #92B961;
+        margin-left: 0;
         margin-bottom: 5%;
       }
     }
