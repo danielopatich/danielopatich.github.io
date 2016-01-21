@@ -98,6 +98,7 @@ header.head {
 
 @media screen and (max-width: 480px) {
   header.head ul {
+    padding: 10px 0px;
     width: 100%; } }
 
 @media screen and (max-width: 480px) {
@@ -550,6 +551,18 @@ main {
     .contactWrap:last-child {
       margin-right: 0; } }
 
+@media screen and (max-width: 480px) {
+  .contactWrap {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-bottom: 50px;
+    display: inline-block;
+    border: none; }
+    .contactWrap:last-child {
+      margin-right: 0; } }
+
 footer {
   display: block;
   background: #ccc;
@@ -972,12 +985,12 @@ footer {
 
 @media screen and (max-width: 480px) {
   .Contact {
-    margin-bottom: 170px;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    margin-left: 8.5298%; }
+    margin-left: 8.5298%;
+    margin-bottom: 200px; }
     .Contact img {
       width: 154.2%; }
     .Contact:last-child {

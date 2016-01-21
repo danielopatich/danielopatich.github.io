@@ -115,6 +115,7 @@ header.head {
 header.head {
   @include media($mobile) {
     ul {
+      padding: 10px 0px;
       width: 100%;
     }
   }
@@ -529,6 +530,15 @@ main {
   }
 }
 
+.contactWrap {
+  @include media($mobile) {
+    @include span-columns(10 of 12);
+    margin-bottom: 50px;
+    display: inline-block;
+    border: none;
+  }
+}
+
 footer {
   display: block;
   background: #ccc;
@@ -883,9 +893,9 @@ main {
     img {
       width: 154.2%;
     }
-    margin-bottom: 170px;
     @include span-columns(6);
     @include shift(1);
+    margin-bottom: 200px;
   }
 }
 
