@@ -967,7 +967,18 @@ footer {
         margin-left: 0;
         margin-bottom: 5%; }
         .Github ul li:last-child {
-          margin-right: 0; } }
+          margin-right: 0; }
+    .Github .imgDescription {
+      position: absolute;
+      top: 10px;
+      height: 240px;
+      font-size: 30px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      visibility: hidden;
+      opacity: 0;
+      text-align: center; } }
 
 @media screen and (max-width: 480px) {
   .audio {

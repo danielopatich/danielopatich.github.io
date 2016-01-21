@@ -873,6 +873,18 @@ main {
         margin-bottom: 5%;
       }
     }
+    .imgDescription {
+      position: absolute;
+      top: 10px;
+      height: 240px;
+      font-size: 30px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      visibility: hidden;
+      opacity: 0;
+      text-align: center;
+    }
   }
 }
 
