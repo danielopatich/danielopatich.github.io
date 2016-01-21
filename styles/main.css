@@ -25,6 +25,7 @@ header.head {
   margin: 0;
   position: absolute;
   position: fixed;
+  z-index: 10;
   float: right;
   padding: 0px 0 15px;
   border-bottom: 1px solid #d7d7cd; }
