@@ -43,16 +43,20 @@ header.head {
       color: none;
       text-decoration: underline;
       background: none; }
+      header.head ul.iconRight :hover li {
+        width: 25%; }
     header.head ul.iconRight img {
       width: 30px;
       border: 0;
       height: 28px;
-      margin: -3.5px 0px 0px 8px; }
+      margin: -3.5px 0px 0px 0px; }
+  header.head ul.navTop {
+    display: -webkit-inline-box; }
 
 .navHead {
   width: 100%; }
   .navHead ul {
-    display: inline-flex;
+    display: -webkit-inline-box;
     list-style-type: none; }
     .navHead ul li a {
       text-decoration: none;
@@ -93,7 +97,7 @@ header.head {
       padding: 4.3px 40px;
       margin-top: -16px; }
     header.head img {
-      margin: 0; }
+      margin: -3.5px 0px 0px 10px; }
     header.head li {
       width: 25%; } }
 
@@ -104,16 +108,15 @@ header.head {
 
 @media screen and (max-width: 480px) {
   .navHead ul {
-    display: inline-flex;
+    display: -webkit-inline-box;
     width: 17%;
     border-right: none;
     list-style-type: none; }
     .navHead ul li a {
       text-decoration: none;
       color: #fff;
-      padding: 0 8px;
-      font-size: 15px;
-      margin-left: 5px; }
+      padding: 0 10px;
+      margin-left: 10px; }
     .navHead ul li a:hover {
       color: #ABC278;
       text-decoration: underline;
@@ -546,7 +549,7 @@ main {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 65.88078%;
+    width: 57.35098%;
     display: inline-block;
     border: none; }
     .contactWrap:last-child {

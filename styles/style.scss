@@ -50,20 +50,26 @@ header.head {
       background: none;
       // height: 10px;
       // transition: all 0.5s ease;
+      li {
+        width: 25%;
+      }
     }
     img {
       width: 30px;
       border: 0;
       height: 28px;
-      margin: -3.5px 0px 0px 8px;
+      margin: -3.5px 0px 0px 0px;
     }
+  }
+  ul.navTop {
+    display: -webkit-inline-box;
   }
 }
 
 .navHead {
   width: 100%;
   ul {
-    display: inline-flex;
+    display: -webkit-inline-box;
     list-style-type: none;
     li {
       a {
@@ -105,7 +111,7 @@ header.head {
       margin-top: -16px;
     }
     img {
-      margin: 0;
+      margin: -3.5px 0px 0px 10px;
     }
     li {
       width: 25%;
@@ -125,7 +131,7 @@ header.head {
 .navHead {
   @include media($mobile) {
     ul {
-      display: inline-flex;
+      display: -webkit-inline-box;
       width: 17%;
       border-right: none;
       list-style-type: none;
@@ -133,9 +139,9 @@ header.head {
         a {
           text-decoration: none;
           color: #fff;
-          padding: 0 8px;
-          font-size: 15px;
-          margin-left: 5px;
+          padding: 0 10px;
+          // font-size: 15px;
+          margin-left: 10px;
         }
         a:hover {
           color: #ABC278;
@@ -525,7 +531,7 @@ main {
 
 .contactWrap {
   @include media($between) {
-    @include span-columns(8 of 12);
+    @include span-columns(7 of 12);
     display: inline-block;
     border: none;
   }
