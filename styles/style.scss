@@ -2,6 +2,26 @@
 // $visual-grid:true;
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
+@font-face {
+  font-family: KlinicSlab;
+  src: url('../fonts/KlinicSlabLightIt.otf') format("opentype");
+}
+
+@font-face {
+  font-family: Haymaker;
+  src: url('../fonts/Haymaker.ttf');
+}
+
+@font-face {
+  font-family: Cubano;
+  src: url('../fonts/Cubano-Regular.otf');
+}
+
+@font-face {
+  font-family: Oilcan;
+  src: url('../fonts/Oil Can.ttf');
+}
+
 $mobile: new-breakpoint(max-width 480px);
 $between: new-breakpoint(max-width 600px);
 $tablet: new-breakpoint(max-width 768px);
@@ -43,6 +63,7 @@ header.head {
   ul.iconRight {
     float: right;
     border-left: 2px solid #A3C278;
+    border-right: 2px solid #A3C278;
     border-right: none;
     :hover {
       color: none;
@@ -55,10 +76,10 @@ header.head {
       }
     }
     img {
-      width: 30px;
+      width: 28px;
       border: 0;
-      height: 28px;
-      margin: -3.5px 0px 0px 0px;
+      height: 26px;
+      margin: -3.5px 0px 0px 15px;
     }
   }
   ul.navTop {
@@ -73,9 +94,10 @@ header.head {
     list-style-type: none;
     li {
       a {
+        font-family: Cubano;
         text-decoration: none;
         color: #fff;
-        padding: 0 10px;
+        padding: 0 20px;
       }
       a:hover {
         color: #ABC278;
@@ -89,13 +111,13 @@ header.head {
 }
 
 header.head {
-  @include media ($between) {
+  @include media ($tablet) {
     ul.iconRight {
-      height: 129px;
+      height: 134px;
       display: inline-block;
-    }
-    img {
-      margin: 0;
+      img {
+        margin: -3.5px -5px 3px 0px;
+      }
     }
   }
 }
@@ -107,11 +129,12 @@ header.head {
     ul.iconRight {
       height: 33px;
       display: -webkit-inline-box;
-      padding: 4.3px 40px;
-      margin-top: -16px;
-    }
-    img {
-      margin: -3.5px 0px 0px 10px;
+      padding: 64.3px auto;
+      margin-top: -17px;
+      box-shadow: 0px 3px 67px -12px #ccc;
+      img {
+        margin: -8.5px 0px 0px 10px;
+      }
     }
     li {
       width: 25%;
@@ -122,7 +145,7 @@ header.head {
 header.head {
   @include media($mobile) {
     ul {
-      padding: 10px 0px;
+      padding: 10px 10px 0 15px;
       width: 100%;
     }
   }
@@ -141,7 +164,7 @@ header.head {
           color: #fff;
           padding: 0 10px;
           // font-size: 15px;
-          margin-left: 10px;
+          // margin-left: 10px;
         }
         a:hover {
           color: #ABC278;
@@ -168,18 +191,19 @@ main {
   @include outer-container;
   height: 270px;
   padding-top: 60px;
-  box-shadow: -68px -23px 47px 41px #212121;
+  // box-shadow: -68px -23px 47px 41px #212121;
   h1 {
-    box-shadow: 1130px -2px 5px 43px #212121;
+    // box-shadow: 1130px -2px 5px 43px #212121;
     background: rgba(60, 66, 59, .75);
     border-top: 1px dotted rgba(174, 172, 142, .3);
     border-bottom: 1px dotted rgba(174, 172, 142, .3);
-    font-family: 'Fanwood Text', serif;
+    font-family: Oilcan;
     font-weight: bold;
     text-align: center;
     margin: 0;
-    font-size: 126px;
-    color: rgba(215, 215, 205, .9);
+    font-size: 110px;
+    padding: 10px 0 0px 0;
+    color: #fff;
   }
 }
 
@@ -195,11 +219,17 @@ main {
   margin-right: 20px;
   float: left;
   margin-bottom: 10px;
-  box-shadow: 5px 20px 72px -5px #212121;
+  margin-top: 10px;
+  // box-shadow: 5px 20px 72px -5px #212121;
 }
 
 .profPic:last-child {
   margin-top: 10px;
+
+}
+
+.Github .imgDescription:last-child {
+  padding: 100px 0 0 0;
 }
 
 // .profPic2 {
@@ -212,6 +242,13 @@ main {
 //   height: 245px;
 //   margin-right: 20px;
 //   float: left;
+// }
+
+// .deerPic {
+//   @include span-columns(3);
+//   background-image: url('../imgs/calc.jpg');
+//   background-position: 50% 49.5555555%;
+//   background-size: cover;
 // }
 
 .break1 {
@@ -231,7 +268,6 @@ main {
   width: 100%;
   height: auto;
   background-image: url('../imgs/rocks.jpg');
-  opacity: .9;
   background-position: 71% 71%;
   background-size: inherit;
   background-repeat: no-repeat;
@@ -241,47 +277,57 @@ main {
 
 .About {
   width: auto;
-  background: rgba(75, 86, 82, .6);
+  background: rgba(75, 86, 82, .9);
   color: #fff;
   @include span-columns(6 of 12);
   height: auto;
-  border: 2px solid #212121;
+  border: 2px solid #9cd654;
   text-align: justify;
   @include outer-container;
   h2 {
-    box-shadow: 285px 130px 2px -15px #212121;
+    font-family: Cubano;
     text-align: center;
-    // border-bottom: 1px solid #212121;
+    border: 2px solid #fff;
+    font-size: 40px;
+    margin: 20px;
   }
   ul {
     @include span-columns(6);
-    font-size: 19.9px;
+    font-size: 27.4px;
     display: block;
+    margin-top: 0;
     li {
+      font-family: KlinicSlab;
     }
   }
 }
 
 .About2 {
   width: auto;
-  background: rgba(75, 86, 82, .6);
+  background: rgba(75, 86, 82, .9);
   color: #fff;
   @include span-columns(6 of 12);
   height: auto;
-  border: 2px solid #212121;
+  border: 2px solid #9cd654;
   text-align: justify;
   @include outer-container;
   h2 {
+    font-family: Cubano;
     text-align: center;
+    border: 2px solid #fff;
+    font-size: 40px;
+    margin: 20px;
   }
 }
 
 .About2 {
   p {
     @include span-columns(12);
+    font-size: 27.2px;
     padding: 0px 30px;
-    font-size: 16.3px;
-    text-align: justify;
+    font-family: KlinicSlab;
+    text-align: -webkit-auto;
+    margin: 10px 0 20px;
   }
 }
 
@@ -297,21 +343,23 @@ main {
   @include outer-container;
   @include span-columns(5 of 12);
   @include shift(1);
-  background: rgba(52, 61, 55, .8);
-  border: 1px solid #D7D7CD;
+  background: rgba(52, 61, 55, .9);
+  border: 2px solid #9cd654;
   a {
     text-decoration: none;
     :hover {
+      transition: all 0.5s ease;
       color: #fff;
       background: #212121
     }
   }
   h2 {
+    font-family: Cubano;
     text-align: center;
-    color: #212121;
-    border: 1px solid #ABC278;
-    margin: 15px;
-    background: #fff;
+    border: 2px solid #fff;
+    font-size: 40px;
+    margin: 20px;
+    color: #fff;
   }
   h5 {
     color: #fff;
@@ -337,7 +385,7 @@ main {
 
 .Github {
   @include span-columns(12 of 12);
-  border: 1px solid #D7D7CD;
+  border: 2px solid #9cd654;
   background: rgba(52, 61, 55, 1);
   img {
     border-radius: 0.9555%;
@@ -351,11 +399,27 @@ main {
   }
   h2 {
     text-align: center;
-    color: #212121;
-    border: 1px solid #ABC278;
+    color: #fff;
+    border: 1px solid #fff;
     margin: 15px;
-    background: #fff;
-    font-size: 36px;
+    background: rgba(39, 47, 41, 0.53);
+    font-family: Cubano;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 40px;
+    // margin: 15px 50px 0 50px;
+  }
+  h3 {
+    text-align: center;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 15px 80px;
+    background: rgba(39, 47, 41, 0.53);
+    font-family: Cubano;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 20px;
+    // margin: 15px 50px 0 50px;
   }
   h5 {
     color: #fff;
@@ -366,27 +430,47 @@ main {
   a {
     text-decoration: none;
     :hover {
+      transition: all 0.5s ease;
       color: #fff;
       background: #212121;
+      // padding: 100px 0;
     }
   }
   ul {
     @include outer-container;
+    margin-left: -30px;
     list-style-type: none;
     a {
       @include span-columns(12);
+      width: 100%;
       text-align: center;
+      font-family: KlinicSlab;
       color: #fff;
-      font-size: 20px;
+      font-size: 30px;
+      border: 1.5px solid #fff;
+      margin: 10px 0px;
+      padding: 1;
+      background: rgba(75, 86, 82, .9);
+      /* border: none; */
+    }
+    a:hover {
+      font-family: KlinicSlab;
+      color: #80AF4A;
+      font-size: 30px;
+      transition: all ease 0.3s;
+      // text-decoration: underline;
     }
     li {
-      @include span-columns(5);
-      @include shift(0);
-      margin-left: 5%;
-      border-bottom: 1px solid #92B961;
+      // width: 40%;
+      @include span-columns(6);
+      margin-right: 1.15765%;
+      // margin-left: 4.3%;
+      // border: 5px solid #92B961;
+      // background: #fff;
       margin-bottom: 5%;
       h3 {
         text-align: center;
+        background: rgba(75, 86, 82, 0.4);
       }
     }
   }
@@ -400,8 +484,8 @@ main {
     @include span-columns(8);
     @include shift(2);
     position: absolute;
-    top: 10px;
-    height: 300px;
+    top: 80px;
+    height: 400px;
     font-size: 30px;
     bottom: 10px;
     left: 0px;
@@ -411,6 +495,10 @@ main {
     text-align: center;
     span:hover {
       color: green;
+      padding: 100px 0;
+    }
+    :last-child {
+      color: #212121;
     }
   }
   .imgWrap:hover .imgDescription {
@@ -421,7 +509,7 @@ main {
   img {
     @include span-columns(8);
     @include shift(2);
-    height: 300px;
+    height: 400px;
   }
   img:hover {
     transition: all 0.9s ease;
@@ -432,7 +520,7 @@ main {
 
 .audio {
   @include span-columns(5 of 12);
-  border: 1px solid #D7D7CD;
+  border: 2px solid #9cd654;
   background: rgba(52, 61, 55, 1);
   .soundcloudWrap {
     margin: 10px;
@@ -441,20 +529,23 @@ main {
     color: #fff;
   }
   p {
+    font-family: KlinicSlab;
     padding: 0 10px;
-    font-size: 18px;
-    margin-bottom: 38px;
+    font-size: 19.33px;
+    // margin-bottom: 38px;
   }
   h2 {
+    font-family: Cubano;
     text-align: center;
-    color: #212121;
-    border: 1px solid #ABC278;
-    margin: 15px;
-    background: #fff;
+    border: 2px solid #fff;
+    font-size: 40px;
+    margin: 20px;
+    color: #fff;
   }
   a {
     text-decoration: none;
     :hover {
+      transition: all 0.5s ease;
       color: #fff;
       background: #212121;
     }
@@ -463,14 +554,19 @@ main {
 
 .Contact {
   @include outer-container;
-  display: inline-block;
+  // display: inline-block;
   h6 {
-    box-shadow: -3px 10px 3px -9px #9BB961;
-    font-size: 15px;
-    border-left: 1px solid #ABC278;
+    display: -webkit-inline-box;
+    font-family: KlinicSlab;
+    // box-shadow: -3px 10px 3px -9px #9BB961;
+    font-size: 30px;
+    // border-left: 1px solid #ABC278;
     @include span-columns(10);
     margin-bottom: 0;
-    margin-top: 10px;
+    margin-top: 40px;
+    span {
+      font-family: KlinicSlab;
+    }
     a {
       color: #B1C278;
     }
@@ -489,25 +585,28 @@ main {
 }
 
 .contactWrap {
-  @include span-columns(4 of 12);
-  @include shift(0);
-  position: absolute;
-  display: inline-block;
+  @include span-columns(12 of 12);
+  @include shift(1);
+  background: rgba(75, 86, 82, .5);
+  // position: absolute;
+  // display: inline-block;
   color: #fff;
   border: 2px solid #ABC278;
-  height: 218px;
+  height: auto;
   margin-top: 25px;
-  padding: 0px 24px;
-  margin-bottom: 25px;
-  border-left: none;
+  // padding: 0px 24px;
+  // margin-bottom: 25px;
+  padding: 0 50px;
   @include outer-container;
   h2 {
-    font-size: 22px;
+    font-family: Cubano;
+    font-size: 48px;
     padding: 10px;
     background: rgba(33, 33, 33, 0.68);
     border: 1px solid #fff;
     animation: pulse 4s infinite;
     margin-bottom: 0;
+    text-align: center;
   }
   @keyframes pulse {
     0% {
@@ -523,7 +622,7 @@ main {
 
 .contactWrap {
   @include media($tablet) {
-    @include span-columns(6 of 12);
+    @include span-columns(11 of 12);
     display: inline-block;
     border: none;
   }
@@ -531,7 +630,7 @@ main {
 
 .contactWrap {
   @include media($between) {
-    @include span-columns(7 of 12);
+    @include span-columns(11 of 12);
     display: inline-block;
     border: none;
   }
@@ -539,10 +638,13 @@ main {
 
 .contactWrap {
   @include media($mobile) {
-    @include span-columns(10 of 12);
-    margin-bottom: 50px;
+    @include span-columns(11 of 12);
+    // margin-bottom: 50px;
     display: inline-block;
     border: none;
+    h2 {
+      font-size: 20px;
+    }
   }
 }
 
@@ -556,14 +658,15 @@ footer {
   @include outer-container;
   width: 100%;
   ul.iconRightBottom {
-    display: inline-flex;
+    display: -webkit-inline-box;
     list-style-type: none;
     float: left;
     width: 100%;
-    margin: 0 70px;
+    // margin: 0 70px;
     // border-left: 2px solid #A3C278;
     // border-right: none;
     a {
+      font-family: Haymaker;
       color: none;
       text-decoration: none;
       background: none;
@@ -571,9 +674,10 @@ footer {
       // transition: all 0.5s ease;
     }
     img {
-      width: 50px;
+      width: 50%;
       border: 0;
-      height: 48px;
+      height: auto;
+      margin: -3.5px 0px 0px 30px;
     }
     li {
       width: 25%;
@@ -595,7 +699,11 @@ footer {
 main {
   @include media($tablet) {
     @include outer-container;
-    margin-top: 0;
+    // margin-top: -21px;
+    // background-image: url('../imgs/pine_path.jpg');
+    // background-position: 100% -38.444445%;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
   }
 }
 
@@ -613,7 +721,7 @@ main {
     @include span-columns(12);
     margin-top: 33px;
     p {
-      font-size: 16px;
+      font-size: 26px;
     }
   }
 }
@@ -638,11 +746,16 @@ main {
     @include span-columns(12);
     float: none;
     box-shadow: none;
+    // background-image: url('../imgs/pine_path.jpg');
+    // background-position: 100% 0.055555%;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    box-shadow: none;
     h1 {
       @include span-columns(12);
       color: rgba(215, 215, 205, .8);
-      margin: 0;
-      font-size: 50px;
+      margin: 20px 0;
+      font-size: 41px;
       border: 1px solid #212121;
     }
   }
@@ -665,7 +778,6 @@ main {
     margin-top: 20px;
     margin-bottom: 20px;
     background: rgba(52, 61, 55, .8);
-    border: 1px solid #D7D7CD;
   }
 }
 
@@ -678,19 +790,17 @@ main {
     img {
       @include span-columns(8);
       @include shift(2);
-      height: 300px;
+      height: 400px;
     }
     ul {
       @include outer-container;
       list-style-type: none;
       a {
         text-align: center;
-        color: #fff;
-        font-size: 20px;
+        font-size: 30px;
       }
       li {
-        @include span-columns(10);
-        border-bottom: 1px solid #92B961;
+        @include span-columns(11);
         margin-bottom: 5%;
         h3 {
           text-align: center;
@@ -711,15 +821,15 @@ main {
       list-style-type: none;
       a {
         text-align: center;
-        color: #fff;
-        font-size: 20px;
+        // color: #fff;
+        // font-size: 20px;
       }
       li {
-        @include span-columns(10);
-        border-bottom: 1px solid #92B961;
+        @include span-columns(11);
         margin-bottom: 5%;
         h3 {
           text-align: center;
+          margin: 0;
         }
       }
     }
@@ -739,15 +849,16 @@ main {
 
 .Contact {
   @include media($tablet) {
+    @include shift(1);
     margin-top: 20px;
     img {
-      @include shift(1);
+      @include shift(3);
     }
     h2 {
-      font-size: 18px;
+      font-size: 34px;
     }
     h6 {
-      font-size: 12px;
+      font-size: 24px;
       margin: 20px 10px;
     }
   }
@@ -762,10 +873,10 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 70%;
-    width: 32.5%;
-    height: 85%;
+    width: 31%;
+    height: 100%;
     margin-right: 20px;
-    box-shadow: 5px 20px 72px -5px #212121;
+    // box-shadow: 5px 20px 72px -5px #212121;
   }
 }
 
@@ -774,6 +885,9 @@ main {
     width: 100%;
     ul.iconRightBottom {
       margin: 0;
+      img {
+        margin: 0.5px 0px 0px 25px;
+      }
     }
   }
 }
@@ -781,6 +895,12 @@ main {
 .navFoot {
   @include media($between) {
     width: 100%;
+    ul.iconRightBottom {
+      margin: 0;
+      img {
+        // margin: 0.5px 0px 0px 0px;
+      }
+    }
   }
 }
 
@@ -866,24 +986,29 @@ main {
     img {
       @include span-columns(12);
       @include shift(0);
-      height: 240px;
+      height: 400px;
       width: 100%;
     }
     ul {
       @include outer-container;
       @include span-columns(12);
       list-style-type: none;
+      margin-left: -20px;
       li {
-        @include span-columns(10);
+        @include span-columns(12);
         @include shift(0);
         margin-left: 0;
         margin-bottom: 5%;
+        a {
+          border: none;
+          background: none;
+        }
       }
     }
     .imgDescription {
       position: absolute;
-      top: 10px;
-      height: 240px;
+      top: 25%;
+      height: 250px;
       font-size: 30px;
       bottom: 0px;
       left: 0px;
@@ -909,12 +1034,14 @@ main {
 
 .Contact {
   @include media($mobile) {
-    img {
-      width: 154.2%;
+    h2 {
+      font-size: 23px;
+      text-align: left;
     }
-    @include span-columns(6);
-    @include shift(1);
-    margin-bottom: 200px;
+    h6 {
+      font-size: 14px;
+      margin: 20px auto;
+    }
   }
 }
 
@@ -922,14 +1049,14 @@ main {
   @include media($mobile) {
     @include span-columns(3);
     @include shift(3);
-    margin-top: 0;
+    margin-top: 10px;
     background-position: 50% 28.5555555%;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
-    box-shadow: 5px 20px 72px -5px #212121;
+    box-shadow: 3px 20px 12px -18px #212121;
     width: 47.5%;
-    height: 90%;
+    height: 75%;
     margin-right: 20px;
   }
 }
@@ -937,5 +1064,11 @@ main {
 .navFoot {
   @include media($mobile) {
     width: 100%;
+    // ul.iconRightBottom img {
+    //   width: 62%;
+    // }
+    ul.iconRightBottom li {
+      width: 20%;
+    }
   }
 }

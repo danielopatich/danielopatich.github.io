@@ -6,6 +6,22 @@ html {
 *::before {
   box-sizing: inherit; }
 
+@font-face {
+  font-family: KlinicSlab;
+  src: url("../fonts/KlinicSlabLightIt.otf") format("opentype"); }
+
+@font-face {
+  font-family: Haymaker;
+  src: url("../fonts/Haymaker.ttf"); }
+
+@font-face {
+  font-family: Cubano;
+  src: url("../fonts/Cubano-Regular.otf"); }
+
+@font-face {
+  font-family: Oilcan;
+  src: url("../fonts/Oil Can.ttf"); }
+
 * {
   box-sizing: border-box;
   font-family: 'Yantramanav', sans-serif; }
@@ -38,6 +54,7 @@ header.head {
   header.head ul.iconRight {
     float: right;
     border-left: 2px solid #A3C278;
+    border-right: 2px solid #A3C278;
     border-right: none; }
     header.head ul.iconRight :hover {
       color: none;
@@ -46,10 +63,10 @@ header.head {
       header.head ul.iconRight :hover li {
         width: 25%; }
     header.head ul.iconRight img {
-      width: 30px;
+      width: 28px;
       border: 0;
-      height: 28px;
-      margin: -3.5px 0px 0px 0px; }
+      height: 26px;
+      margin: -3.5px 0px 0px 15px; }
   header.head ul.navTop {
     display: -webkit-inline-box; }
 
@@ -59,9 +76,10 @@ header.head {
     display: -webkit-inline-box;
     list-style-type: none; }
     .navHead ul li a {
+      font-family: Cubano;
       text-decoration: none;
       color: #fff;
-      padding: 0 10px; }
+      padding: 0 20px; }
     .navHead ul li a:hover {
       color: #ABC278;
       text-decoration: underline;
@@ -69,12 +87,12 @@ header.head {
       height: 10px;
       transition: all 0.5s ease; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   header.head ul.iconRight {
-    height: 129px;
+    height: 134px;
     display: inline-block; }
-  header.head img {
-    margin: 0; } }
+    header.head ul.iconRight img {
+      margin: -3.5px -5px 3px 0px; } }
 
 @media screen and (max-width: 480px) {
   header.head {
@@ -94,16 +112,17 @@ header.head {
     header.head ul.iconRight {
       height: 33px;
       display: -webkit-inline-box;
-      padding: 4.3px 40px;
-      margin-top: -16px; }
-    header.head img {
-      margin: -3.5px 0px 0px 10px; }
+      padding: 64.3px auto;
+      margin-top: -17px;
+      box-shadow: 0px 3px 67px -12px #ccc; }
+      header.head ul.iconRight img {
+        margin: -8.5px 0px 0px 10px; }
     header.head li {
       width: 25%; } }
 
 @media screen and (max-width: 480px) {
   header.head ul {
-    padding: 10px 0px;
+    padding: 10px 10px 0 15px;
     width: 100%; } }
 
 @media screen and (max-width: 480px) {
@@ -115,8 +134,7 @@ header.head {
     .navHead ul li a {
       text-decoration: none;
       color: #fff;
-      padding: 0 10px;
-      margin-left: 10px; }
+      padding: 0 10px; }
     .navHead ul li a:hover {
       color: #ABC278;
       text-decoration: underline;
@@ -142,23 +160,22 @@ main {
   margin-left: auto;
   margin-right: auto;
   height: 270px;
-  padding-top: 60px;
-  box-shadow: -68px -23px 47px 41px #212121; }
+  padding-top: 60px; }
   .top::after {
     clear: both;
     content: "";
     display: table; }
   .top h1 {
-    box-shadow: 1130px -2px 5px 43px #212121;
     background: rgba(60, 66, 59, 0.75);
     border-top: 1px dotted rgba(174, 172, 142, 0.3);
     border-bottom: 1px dotted rgba(174, 172, 142, 0.3);
-    font-family: 'Fanwood Text', serif;
+    font-family: Oilcan;
     font-weight: bold;
     text-align: center;
     margin: 0;
-    font-size: 126px;
-    color: rgba(215, 215, 205, 0.9); }
+    font-size: 110px;
+    padding: 10px 0 0px 0;
+    color: #fff; }
 
 .profPic {
   margin-left: 34.11922%;
@@ -172,10 +189,13 @@ main {
   margin-right: 20px;
   float: left;
   margin-bottom: 10px;
-  box-shadow: 5px 20px 72px -5px #212121; }
+  margin-top: 10px; }
 
 .profPic:last-child {
   margin-top: 10px; }
+
+.Github .imgDescription:last-child {
+  padding: 100px 0 0 0; }
 
 .break1 {
   max-width: 100%;
@@ -193,7 +213,6 @@ main {
   width: 100%;
   height: auto;
   background-image: url("../imgs/rocks.jpg");
-  opacity: .9;
   background-position: 71% 71%;
   background-size: inherit;
   background-repeat: no-repeat;
@@ -202,14 +221,14 @@ main {
 
 .About {
   width: auto;
-  background: rgba(75, 86, 82, 0.6);
+  background: rgba(75, 86, 82, 0.9);
   color: #fff;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
   height: auto;
-  border: 2px solid #212121;
+  border: 2px solid #9cd654;
   text-align: justify;
   max-width: 68em;
   margin-left: auto;
@@ -221,28 +240,34 @@ main {
     content: "";
     display: table; }
   .About h2 {
-    box-shadow: 285px 130px 2px -15px #212121;
-    text-align: center; }
+    font-family: Cubano;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 40px;
+    margin: 20px; }
   .About ul {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
-    font-size: 19.9px;
-    display: block; }
+    font-size: 27.4px;
+    display: block;
+    margin-top: 0; }
     .About ul:last-child {
       margin-right: 0; }
+    .About ul li {
+      font-family: KlinicSlab; }
 
 .About2 {
   width: auto;
-  background: rgba(75, 86, 82, 0.6);
+  background: rgba(75, 86, 82, 0.9);
   color: #fff;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
   height: auto;
-  border: 2px solid #212121;
+  border: 2px solid #9cd654;
   text-align: justify;
   max-width: 68em;
   margin-left: auto;
@@ -254,16 +279,22 @@ main {
     content: "";
     display: table; }
   .About2 h2 {
-    text-align: center; }
+    font-family: Cubano;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 40px;
+    margin: 20px; }
 
 .About2 p {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
+  font-size: 27.2px;
   padding: 0px 30px;
-  font-size: 16.3px;
-  text-align: justify; }
+  font-family: KlinicSlab;
+  text-align: -webkit-auto;
+  margin: 10px 0 20px; }
   .About2 p:last-child {
     margin-right: 0; }
 
@@ -281,8 +312,8 @@ main {
   margin-right: 2.35765%;
   width: 40.29137%;
   margin-left: 8.5298%;
-  background: rgba(52, 61, 55, 0.8);
-  border: 1px solid #D7D7CD; }
+  background: rgba(52, 61, 55, 0.9);
+  border: 2px solid #9cd654; }
   .Resume::after {
     clear: both;
     content: "";
@@ -292,14 +323,16 @@ main {
   .Resume a {
     text-decoration: none; }
     .Resume a :hover {
+      transition: all 0.5s ease;
       color: #fff;
       background: #212121; }
   .Resume h2 {
+    font-family: Cubano;
     text-align: center;
-    color: #212121;
-    border: 1px solid #ABC278;
-    margin: 15px;
-    background: #fff; }
+    border: 2px solid #fff;
+    font-size: 40px;
+    margin: 20px;
+    color: #fff; }
   .Resume h5 {
     color: #fff;
     text-align: center;
@@ -323,7 +356,7 @@ main {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  border: 1px solid #D7D7CD;
+  border: 2px solid #9cd654;
   background: #343d37; }
   .Github:last-child {
     margin-right: 0; }
@@ -338,11 +371,24 @@ main {
     /* float: left; */ }
   .Github h2 {
     text-align: center;
-    color: #212121;
-    border: 1px solid #ABC278;
+    color: #fff;
+    border: 1px solid #fff;
     margin: 15px;
-    background: #fff;
-    font-size: 36px; }
+    background: rgba(39, 47, 41, 0.53);
+    font-family: Cubano;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 40px; }
+  .Github h3 {
+    text-align: center;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 15px 80px;
+    background: rgba(39, 47, 41, 0.53);
+    font-family: Cubano;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 20px; }
   .Github h5 {
     color: #fff;
     text-align: center;
@@ -351,12 +397,14 @@ main {
   .Github a {
     text-decoration: none; }
     .Github a :hover {
+      transition: all 0.5s ease;
       color: #fff;
       background: #212121; }
   .Github ul {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
+    margin-left: -30px;
     list-style-type: none; }
     .Github ul::after {
       clear: both;
@@ -367,24 +415,35 @@ main {
       display: block;
       margin-right: 2.35765%;
       width: 100%;
+      width: 100%;
       text-align: center;
+      font-family: KlinicSlab;
       color: #fff;
-      font-size: 20px; }
+      font-size: 30px;
+      border: 1.5px solid #fff;
+      margin: 10px 0px;
+      padding: 1;
+      background: rgba(75, 86, 82, 0.9);
+      /* border: none; */ }
       .Github ul a:last-child {
         margin-right: 0; }
+    .Github ul a:hover {
+      font-family: KlinicSlab;
+      color: #80AF4A;
+      font-size: 30px;
+      transition: all ease 0.3s; }
     .Github ul li {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 40.29137%;
-      margin-left: 0%;
-      margin-left: 5%;
-      border-bottom: 1px solid #92B961;
+      width: 48.82117%;
+      margin-right: 1.15765%;
       margin-bottom: 5%; }
       .Github ul li:last-child {
         margin-right: 0; }
       .Github ul li h3 {
-        text-align: center; }
+        text-align: center;
+        background: rgba(75, 86, 82, 0.4); }
 
 .Github .imgWrap {
   position: relative; }
@@ -396,8 +455,8 @@ main {
   width: 65.88078%;
   margin-left: 17.05961%;
   position: absolute;
-  top: 10px;
-  height: 300px;
+  top: 80px;
+  height: 400px;
   font-size: 30px;
   bottom: 10px;
   left: 0px;
@@ -408,7 +467,10 @@ main {
   .Github .imgDescription:last-child {
     margin-right: 0; }
   .Github .imgDescription span:hover {
-    color: green; }
+    color: green;
+    padding: 100px 0; }
+  .Github .imgDescription :last-child {
+    color: #212121; }
 
 .Github .imgWrap:hover .imgDescription {
   visibility: visible;
@@ -421,7 +483,7 @@ main {
   margin-right: 2.35765%;
   width: 65.88078%;
   margin-left: 17.05961%;
-  height: 300px; }
+  height: 400px; }
   .Github img:last-child {
     margin-right: 0; }
 
@@ -435,7 +497,7 @@ main {
   display: block;
   margin-right: 2.35765%;
   width: 40.29137%;
-  border: 1px solid #D7D7CD;
+  border: 2px solid #9cd654;
   background: #343d37; }
   .audio:last-child {
     margin-right: 0; }
@@ -444,42 +506,45 @@ main {
   .audio h2, .audio p {
     color: #fff; }
   .audio p {
+    font-family: KlinicSlab;
     padding: 0 10px;
-    font-size: 18px;
-    margin-bottom: 38px; }
+    font-size: 19.33px; }
   .audio h2 {
+    font-family: Cubano;
     text-align: center;
-    color: #212121;
-    border: 1px solid #ABC278;
-    margin: 15px;
-    background: #fff; }
+    border: 2px solid #fff;
+    font-size: 40px;
+    margin: 20px;
+    color: #fff; }
   .audio a {
     text-decoration: none; }
     .audio a :hover {
+      transition: all 0.5s ease;
       color: #fff;
       background: #212121; }
 
 .Contact {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto;
-  display: inline-block; }
+  margin-right: auto; }
   .Contact::after {
     clear: both;
     content: "";
     display: table; }
   .Contact h6 {
-    box-shadow: -3px 10px 3px -9px #9BB961;
-    font-size: 15px;
-    border-left: 1px solid #ABC278;
+    display: -webkit-inline-box;
+    font-family: KlinicSlab;
+    font-size: 30px;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%;
     margin-bottom: 0;
-    margin-top: 10px; }
+    margin-top: 40px; }
     .Contact h6:last-child {
       margin-right: 0; }
+    .Contact h6 span {
+      font-family: KlinicSlab; }
     .Contact h6 a {
       color: #B1C278; }
   .Contact img {
@@ -497,17 +562,14 @@ main {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%;
-  margin-left: 0%;
-  position: absolute;
-  display: inline-block;
+  width: 100%;
+  margin-left: 8.5298%;
+  background: rgba(75, 86, 82, 0.5);
   color: #fff;
   border: 2px solid #ABC278;
-  height: 218px;
+  height: auto;
   margin-top: 25px;
-  padding: 0px 24px;
-  margin-bottom: 25px;
-  border-left: none;
+  padding: 0 50px;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
@@ -518,12 +580,14 @@ main {
     content: "";
     display: table; }
   .contactWrap h2 {
-    font-size: 22px;
+    font-family: Cubano;
+    font-size: 48px;
     padding: 10px;
     background: rgba(33, 33, 33, 0.68);
     border: 1px solid #fff;
     animation: pulse 4s infinite;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-align: center; }
 
 @keyframes pulse {
   0% {
@@ -538,7 +602,7 @@ main {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%;
+    width: 91.4702%;
     display: inline-block;
     border: none; }
     .contactWrap:last-child {
@@ -549,7 +613,7 @@ main {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 57.35098%;
+    width: 91.4702%;
     display: inline-block;
     border: none; }
     .contactWrap:last-child {
@@ -560,12 +624,13 @@ main {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 82.94039%;
-    margin-bottom: 50px;
+    width: 91.4702%;
     display: inline-block;
     border: none; }
     .contactWrap:last-child {
-      margin-right: 0; } }
+      margin-right: 0; }
+    .contactWrap h2 {
+      font-size: 20px; } }
 
 footer {
   display: block;
@@ -582,19 +647,20 @@ footer {
     content: "";
     display: table; }
   .navFoot ul.iconRightBottom {
-    display: inline-flex;
+    display: -webkit-inline-box;
     list-style-type: none;
     float: left;
-    width: 100%;
-    margin: 0 70px; }
+    width: 100%; }
     .navFoot ul.iconRightBottom a {
+      font-family: Haymaker;
       color: none;
       text-decoration: none;
       background: none; }
     .navFoot ul.iconRightBottom img {
-      width: 50px;
+      width: 50%;
       border: 0;
-      height: 48px; }
+      height: auto;
+      margin: -3.5px 0px 0px 30px; }
     .navFoot ul.iconRightBottom li {
       width: 25%; }
 
@@ -614,7 +680,8 @@ footer {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0; }
+    /* background-size: cover; */
+    background-repeat: no-repeat; }
     main::after {
       clear: both;
       content: "";
@@ -641,7 +708,7 @@ footer {
     .About2:last-child {
       margin-right: 0; }
     .About2 p {
-      font-size: 16px; } }
+      font-size: 26px; } }
 
 @media screen and (max-width: 768px) {
   .break1 {
@@ -671,6 +738,9 @@ footer {
     margin-right: 2.35765%;
     width: 100%;
     float: none;
+    box-shadow: none;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
     box-shadow: none; }
     .top:last-child {
       margin-right: 0; }
@@ -680,8 +750,8 @@ footer {
       margin-right: 2.35765%;
       width: 100%;
       color: rgba(215, 215, 205, 0.8);
-      margin: 0;
-      font-size: 50px;
+      margin: 20px 0;
+      font-size: 41px;
       border: 1px solid #212121; }
       .top h1:last-child {
         margin-right: 0; } }
@@ -701,8 +771,7 @@ footer {
     margin-left: 0;
     margin-top: 20px;
     margin-bottom: 20px;
-    background: rgba(52, 61, 55, 0.8);
-    border: 1px solid #D7D7CD; }
+    background: rgba(52, 61, 55, 0.8); }
     .Resume:last-child {
       margin-right: 0; } }
 
@@ -723,7 +792,7 @@ footer {
       margin-right: 2.35765%;
       width: 65.88078%;
       margin-left: 17.05961%;
-      height: 300px; }
+      height: 400px; }
       .Github img:last-child {
         margin-right: 0; }
     .Github ul {
@@ -737,14 +806,12 @@ footer {
         display: table; }
       .Github ul a {
         text-align: center;
-        color: #fff;
-        font-size: 20px; }
+        font-size: 30px; }
       .Github ul li {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 82.94039%;
-        border-bottom: 1px solid #92B961;
+        width: 91.4702%;
         margin-bottom: 5%; }
         .Github ul li:last-child {
           margin-right: 0; }
@@ -772,20 +839,18 @@ footer {
         content: "";
         display: table; }
       .Github ul a {
-        text-align: center;
-        color: #fff;
-        font-size: 20px; }
+        text-align: center; }
       .Github ul li {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 82.94039%;
-        border-bottom: 1px solid #92B961;
+        width: 91.4702%;
         margin-bottom: 5%; }
         .Github ul li:last-child {
           margin-right: 0; }
         .Github ul li h3 {
-          text-align: center; } }
+          text-align: center;
+          margin: 0; } }
 
 @media screen and (max-width: 768px) {
   .audio {
@@ -802,13 +867,14 @@ footer {
 
 @media screen and (max-width: 768px) {
   .Contact {
+    margin-left: 8.5298%;
     margin-top: 20px; }
     .Contact img {
-      margin-left: 8.5298%; }
+      margin-left: 25.58941%; }
     .Contact h2 {
-      font-size: 18px; }
+      font-size: 34px; }
     .Contact h6 {
-      font-size: 12px;
+      font-size: 24px;
       margin: 20px 10px; } }
 
 @media screen and (max-width: 768px) {
@@ -823,10 +889,9 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 70%;
-    width: 32.5%;
-    height: 85%;
-    margin-right: 20px;
-    box-shadow: 5px 20px 72px -5px #212121; }
+    width: 31%;
+    height: 100%;
+    margin-right: 20px; }
     .profPic:last-child {
       margin-right: 0; } }
 
@@ -834,11 +899,15 @@ footer {
   .navFoot {
     width: 100%; }
     .navFoot ul.iconRightBottom {
-      margin: 0; } }
+      margin: 0; }
+      .navFoot ul.iconRightBottom img {
+        margin: 0.5px 0px 0px 25px; } }
 
 @media screen and (max-width: 600px) {
   .navFoot {
-    width: 100%; } }
+    width: 100%; }
+    .navFoot ul.iconRightBottom {
+      margin: 0; } }
 
 @media screen and (max-width: 480px) {
   .mainWrap {
@@ -943,7 +1012,7 @@ footer {
       margin-right: 2.35765%;
       width: 100%;
       margin-left: 0%;
-      height: 240px;
+      height: 400px;
       width: 100%; }
       .Github img:last-child {
         margin-right: 0; }
@@ -955,7 +1024,8 @@ footer {
       display: block;
       margin-right: 2.35765%;
       width: 100%;
-      list-style-type: none; }
+      list-style-type: none;
+      margin-left: -20px; }
       .Github ul::after {
         clear: both;
         content: "";
@@ -966,16 +1036,19 @@ footer {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 82.94039%;
+        width: 100%;
         margin-left: 0%;
         margin-left: 0;
         margin-bottom: 5%; }
         .Github ul li:last-child {
           margin-right: 0; }
+        .Github ul li a {
+          border: none;
+          background: none; }
     .Github .imgDescription {
       position: absolute;
-      top: 10px;
-      height: 240px;
+      top: 25%;
+      height: 250px;
       font-size: 30px;
       bottom: 0px;
       left: 0px;
@@ -999,17 +1072,12 @@ footer {
       font-size: 15px; } }
 
 @media screen and (max-width: 480px) {
-  .Contact {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 8.5298%;
-    margin-bottom: 200px; }
-    .Contact img {
-      width: 154.2%; }
-    .Contact:last-child {
-      margin-right: 0; } }
+  .Contact h2 {
+    font-size: 23px;
+    text-align: left; }
+  .Contact h6 {
+    font-size: 14px;
+    margin: 20px auto; } }
 
 @media screen and (max-width: 480px) {
   .profPic {
@@ -1018,18 +1086,20 @@ footer {
     margin-right: 2.35765%;
     width: 23.23176%;
     margin-left: 25.58941%;
-    margin-top: 0;
+    margin-top: 10px;
     background-position: 50% 28.5555555%;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
-    box-shadow: 5px 20px 72px -5px #212121;
+    box-shadow: 3px 20px 12px -18px #212121;
     width: 47.5%;
-    height: 90%;
+    height: 75%;
     margin-right: 20px; }
     .profPic:last-child {
       margin-right: 0; } }
 
 @media screen and (max-width: 480px) {
   .navFoot {
-    width: 100%; } }
+    width: 100%; }
+    .navFoot ul.iconRightBottom li {
+      width: 20%; } }
