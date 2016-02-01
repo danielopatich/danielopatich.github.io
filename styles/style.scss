@@ -162,7 +162,7 @@ header.head {
         a {
           text-decoration: none;
           color: #fff;
-          padding: 0 10px;
+          padding: 0 5px;
           // font-size: 15px;
           // margin-left: 10px;
         }
@@ -229,7 +229,7 @@ main {
 }
 
 .Github .imgDescription:last-child {
-  padding: 100px 0 0 0;
+  padding: 60px 0 0 0;
 }
 
 // .profPic2 {
@@ -268,7 +268,7 @@ main {
   width: 100%;
   height: auto;
   background-image: url('../imgs/rocks.jpg');
-  background-position: 71% 71%;
+  background-position: 71% 91%;
   background-size: inherit;
   background-repeat: no-repeat;
   padding: 50px;
@@ -343,7 +343,7 @@ main {
   @include outer-container;
   @include span-columns(5 of 12);
   @include shift(1);
-  background: rgba(52, 61, 55, .9);
+  // background: rgba(52, 61, 55, .9);
   border: 2px solid #9cd654;
   a {
     text-decoration: none;
@@ -986,7 +986,7 @@ main {
     img {
       @include span-columns(12);
       @include shift(0);
-      height: 400px;
+      height: 300px;
       width: 100%;
     }
     ul {
@@ -1008,7 +1008,7 @@ main {
     .imgDescription {
       position: absolute;
       top: 25%;
-      height: 250px;
+      height: 150px;
       font-size: 30px;
       bottom: 0px;
       left: 0px;

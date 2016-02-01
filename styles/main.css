@@ -134,7 +134,7 @@ header.head {
     .navHead ul li a {
       text-decoration: none;
       color: #fff;
-      padding: 0 10px; }
+      padding: 0 5px; }
     .navHead ul li a:hover {
       color: #ABC278;
       text-decoration: underline;
@@ -195,7 +195,7 @@ main {
   margin-top: 10px; }
 
 .Github .imgDescription:last-child {
-  padding: 100px 0 0 0; }
+  padding: 60px 0 0 0; }
 
 .break1 {
   max-width: 100%;
@@ -213,7 +213,7 @@ main {
   width: 100%;
   height: auto;
   background-image: url("../imgs/rocks.jpg");
-  background-position: 71% 71%;
+  background-position: 71% 91%;
   background-size: inherit;
   background-repeat: no-repeat;
   padding: 50px;
@@ -312,7 +312,6 @@ main {
   margin-right: 2.35765%;
   width: 40.29137%;
   margin-left: 8.5298%;
-  background: rgba(52, 61, 55, 0.9);
   border: 2px solid #9cd654; }
   .Resume::after {
     clear: both;
@@ -1012,7 +1011,7 @@ footer {
       margin-right: 2.35765%;
       width: 100%;
       margin-left: 0%;
-      height: 400px;
+      height: 300px;
       width: 100%; }
       .Github img:last-child {
         margin-right: 0; }
@@ -1048,7 +1047,7 @@ footer {
     .Github .imgDescription {
       position: absolute;
       top: 25%;
-      height: 250px;
+      height: 150px;
       font-size: 30px;
       bottom: 0px;
       left: 0px;
