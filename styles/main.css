@@ -28,33 +28,29 @@ html {
 
 body {
   background: #EDEDF3;
-  background-image: url("../imgs/pine_path.jpg");
   background-position: 50% 51.5555555%;
   background-size: cover;
   background-repeat: no-repeat; }
 
 header.head {
   display: block;
-  background: rgba(60, 66, 59, 0.6);
+  background: #ffffff;
   width: 100%;
-  height: 40px;
-  margin: 0;
-  position: absolute;
+  height: 39px;
   position: fixed;
-  z-index: 10;
-  float: right;
+  /* z-index: 0; */
+  /* float: right; */
   padding: 0px 0 15px;
-  border-bottom: 1px solid #d7d7cd; }
+  border-bottom: 1px solid lightcoral; }
   header.head ul {
-    background: #212121;
     height: 40px;
     padding: 10px 0;
-    border-right: 2px solid #A3C278;
+    border-right: 2px solid #4b5f6f;
     margin-top: -1px; }
   header.head ul.iconRight {
     float: right;
-    border-left: 2px solid #A3C278;
-    border-right: 2px solid #A3C278;
+    border-left: 2px solid #4b5f6f;
+    border-right: 2px solid #4b5f6f;
     border-right: none; }
     header.head ul.iconRight :hover {
       color: none;
@@ -71,6 +67,8 @@ header.head {
     display: -webkit-inline-box; }
 
 .navHead {
+  height: 2.4em;
+  box-shadow: 0px -10px 45px 0 lightcoral;
   width: 100%; }
   .navHead ul {
     display: -webkit-inline-box;
@@ -78,21 +76,12 @@ header.head {
     .navHead ul li a {
       font-family: Cubano;
       text-decoration: none;
-      color: #fff;
+      color: #4b5f6f;
       padding: 0 20px; }
     .navHead ul li a:hover {
-      color: #ABC278;
-      text-decoration: underline;
-      background: #fff;
+      color: lightcoral;
       height: 10px;
       transition: all 0.5s ease; }
-
-@media screen and (max-width: 768px) {
-  header.head ul.iconRight {
-    height: 134px;
-    display: inline-block; }
-    header.head ul.iconRight img {
-      margin: -3.5px -5px 3px 0px; } }
 
 @media screen and (max-width: 480px) {
   header.head {
@@ -143,59 +132,49 @@ header.head {
       transition: all 0.5s ease; } }
 
 .mainWrap {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .mainWrap::after {
-    clear: both;
-    content: "";
-    display: table; }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start; }
 
 main {
-  margin-top: 180px;
+  margin-top: 0px;
   margin-bottom: 100px; }
 
 .top {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
   height: 270px;
   padding-top: 60px; }
-  .top::after {
-    clear: both;
-    content: "";
-    display: table; }
   .top h1 {
-    background: rgba(60, 66, 59, 0.75);
-    border-top: 1px dotted rgba(174, 172, 142, 0.3);
-    border-bottom: 1px dotted rgba(174, 172, 142, 0.3);
-    font-family: Oilcan;
+    font-family: KlinicSlab;
     font-weight: bold;
     text-align: center;
     margin: 0;
-    font-size: 110px;
+    font-size: 2em;
     padding: 10px 0 0px 0;
-    color: #fff; }
+    color: #4b5f6f; }
+
+@keyframes pulse {
+  0% {
+    background-color: #212121; }
+  100% {
+    background-color: rgba(150, 180, 168, 0.68);
+    color: #212121;
+    border: 1px solid #9BB961; } }
 
 .profPic {
-  margin-left: 34.11922%;
-  background-image: url("../imgs/me.jpeg");
-  background-position: 50% 33.5555555%;
+  background-image: url("../imgs/me22.jpg");
+  background-position: 50% 99.555555%;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 50%;
-  width: 32.5%;
-  height: 150%;
+  border-radius: 0%;
+  width: 20%;
+  height: 100%;
   margin-right: 20px;
   float: left;
   margin-bottom: 10px;
   margin-top: 10px; }
-
-.profPic:last-child {
-  margin-top: 10px; }
-
-.Github .imgDescription:last-child {
-  padding: 60px 0 0 0; }
 
 .break1 {
   max-width: 100%;
@@ -204,80 +183,26 @@ main {
   background-position: 50% 49.5555555%;
   background-size: cover;
   background-repeat: no-repeat;
-  display: inline-flex;
-  padding: 30px; }
+  padding: 10em; }
 
 .break2 {
   float: left;
   display: block;
   width: 100%;
   height: auto;
-  background-image: url("../imgs/rocks.jpg");
   background-position: 71% 91%;
   background-size: inherit;
   background-repeat: no-repeat;
   padding: 50px;
-  border: 10px solid #212121; }
-
-.About {
-  width: auto;
-  background: rgba(75, 86, 82, 0.9);
-  color: #fff;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  height: auto;
-  border: 2px solid #9cd654;
-  text-align: justify;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .About:last-child {
-    margin-right: 0; }
-  .About::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .About h2 {
-    font-family: Cubano;
-    text-align: center;
-    border: 2px solid #fff;
-    font-size: 40px;
-    margin: 20px; }
-  .About ul {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    font-size: 27.4px;
-    display: block;
-    margin-top: 0; }
-    .About ul:last-child {
-      margin-right: 0; }
-    .About ul li {
-      font-family: KlinicSlab; }
+  border: none; }
 
 .About2 {
   width: auto;
   background: rgba(75, 86, 82, 0.9);
   color: #fff;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
   height: auto;
-  border: 2px solid #9cd654;
-  text-align: justify;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .About2:last-child {
-    margin-right: 0; }
-  .About2::after {
-    clear: both;
-    content: "";
-    display: table; }
+  border: none;
+  text-align: justify; }
   .About2 h2 {
     font-family: Cubano;
     text-align: center;
@@ -298,804 +223,113 @@ main {
   .About2 p:last-child {
     margin-right: 0; }
 
-.About p {
-  padding: 0px 30px;
-  font-size: 15px;
-  text-align: justify; }
-
-.Resume {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-  margin-left: 8.5298%;
-  background: rgba(52, 61, 55, 0.9);
-  border: 2px solid #9cd654; }
-  .Resume::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .Resume:last-child {
-    margin-right: 0; }
-  .Resume a {
-    text-decoration: none; }
-    .Resume a :hover {
-      transition: all 0.5s ease;
-      color: #fff;
-      background: #212121; }
-  .Resume h2 {
-    font-family: Cubano;
-    text-align: center;
-    border: 2px solid #fff;
-    font-size: 40px;
-    margin: 20px;
-    color: #fff; }
-  .Resume h5 {
-    color: #fff;
-    text-align: center;
-    margin: -7px;
-    font-size: 12px; }
-  .Resume img {
-    border-radius: 0.9555%;
-    width: 100%;
-    border: none;
-    height: auto;
-    /* margin-right: 20px; */
-    /* float: left; */ }
-  .Resume img:hover {
-    transition: all 0.5s ease;
-    border: 30px solid #ABC278; }
-
-.Github {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  border: 2px solid #9cd654;
-  background: #343d37; }
-  .Github:last-child {
-    margin-right: 0; }
-  .Github img {
-    border-radius: 0.9555%;
-    width: 22%;
-    opacity: 0.8;
-    border: none;
-    /* height: auto; */
-    /* margin-right: 20px; */
-    margin: 10px 10px;
-    /* float: left; */ }
-  .Github h2 {
-    text-align: center;
-    color: #fff;
-    border: 1px solid #fff;
-    margin: 15px;
-    background: rgba(39, 47, 41, 0.53);
-    font-family: Cubano;
-    text-align: center;
-    border: 2px solid #fff;
-    font-size: 40px; }
-  .Github h3 {
-    text-align: center;
-    color: #fff;
-    border: 1px solid #fff;
-    margin: 15px 80px;
-    background: rgba(39, 47, 41, 0.53);
-    font-family: Cubano;
-    text-align: center;
-    border: 2px solid #fff;
-    font-size: 20px; }
-  .Github h5 {
-    color: #fff;
-    text-align: center;
-    margin: -7px;
-    font-size: 12px; }
-  .Github a {
-    text-decoration: none; }
-    .Github a :hover {
-      transition: all 0.5s ease;
-      color: #fff;
-      background: #212121; }
-  .Github ul {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-left: -30px;
-    list-style-type: none; }
-    .Github ul::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .Github ul a {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%;
-      width: 100%;
-      text-align: center;
-      font-family: KlinicSlab;
-      color: #fff;
-      font-size: 30px;
-      border: 1.5px solid #fff;
-      margin: 10px 0px;
-      padding: 1;
-      background: rgba(75, 86, 82, 0.9);
-      /* border: none; */ }
-      .Github ul a:last-child {
-        margin-right: 0; }
-    .Github ul a:hover {
-      font-family: KlinicSlab;
-      color: #80AF4A;
-      font-size: 30px;
-      transition: all ease 0.3s; }
-    .Github ul li {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%;
-      margin-right: 1.15765%;
-      margin-bottom: 5%; }
-      .Github ul li:last-child {
-        margin-right: 0; }
-      .Github ul li h3 {
-        text-align: center;
-        background: rgba(75, 86, 82, 0.4); }
-
-.Github .imgWrap {
-  position: relative; }
-
-.Github .imgDescription {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%;
-  margin-left: 17.05961%;
-  position: absolute;
-  top: 80px;
-  height: 400px;
-  font-size: 30px;
-  bottom: 10px;
-  left: 0px;
-  right: 0px;
-  visibility: hidden;
-  opacity: 0;
-  text-align: center; }
-  .Github .imgDescription:last-child {
-    margin-right: 0; }
-  .Github .imgDescription span:hover {
-    color: green;
-    padding: 100px 0; }
-  .Github .imgDescription :last-child {
-    color: #212121; }
-
-.Github .imgWrap:hover .imgDescription {
-  visibility: visible;
-  transition: all 0.5s ease;
-  opacity: 1; }
-
-.Github img {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%;
-  margin-left: 17.05961%;
-  height: 400px; }
-  .Github img:last-child {
-    margin-right: 0; }
-
-.Github img:hover {
-  transition: all 0.9s ease;
-  opacity: 1;
-  background: #fff; }
-
 .audio {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 40.29137%;
-  border: 2px solid #9cd654;
-  background: #343d37; }
+  border: none;
+  background: #fff;
+  height: 30em; }
   .audio:last-child {
     margin-right: 0; }
   .audio .soundcloudWrap {
     margin: 10px; }
   .audio h2, .audio p {
-    color: #fff; }
+    color: #4b5f6f; }
   .audio p {
     font-family: KlinicSlab;
     padding: 0 10px;
-    font-size: 20px; }
+    font-size: 20px;
+    text-align: right; }
   .audio h2 {
     font-family: Cubano;
     text-align: center;
-    border: 2px solid #fff;
-    font-size: 40px;
+    border: none;
+    font-size: 30px;
     margin: 20px;
-    color: #fff; }
+    color: #4b5f6f;
+    text-align: right; }
   .audio a {
     text-decoration: none; }
     .audio a :hover {
       transition: all 0.5s ease;
-      color: #fff;
-      background: #212121; }
+      color: lightcoral; }
 
-.Contact {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .Contact::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .Contact h6 {
-    display: -webkit-inline-box;
-    font-family: KlinicSlab;
-    font-size: 30px;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    margin-bottom: 0;
-    margin-top: 40px; }
-    .Contact h6:last-child {
-      margin-right: 0; }
-    .Contact h6 span {
-      font-family: KlinicSlab; }
-    .Contact h6 a {
-      color: #B1C278; }
-  .Contact img {
-    margin-left: 34.11922%;
-    border-radius: 0.9555%;
-    width: 34.2%;
-    border: none;
-    height: auto;
-    margin-top: 25px;
-    /* margin-right: 20px; */
-    /* margin: 10px 10px; */
-    /* float: left; */ }
-
-.contactWrap {
+.skillz {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
-  margin-left: 8.5298%;
-  background: rgba(75, 86, 82, 0.5);
-  color: #fff;
-  border: 2px solid #ABC278;
-  height: auto;
-  margin-top: 25px;
-  padding: 0 50px;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .contactWrap:last-child {
+  width: 31.76157%;
+  border: none;
+  background: #fff;
+  height: 10em;
+  margin-bottom: 1em; }
+  .skillz:last-child {
     margin-right: 0; }
-  .contactWrap::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .contactWrap h2 {
+  .skillz .soundcloudWrap {
+    margin: 10px; }
+  .skillz h2, .skillz p {
+    color: #4b5f6f; }
+  .skillz p {
+    font-family: KlinicSlab;
+    padding: 0 10px;
+    font-size: 20px;
+    text-align: right; }
+  .skillz h2 {
     font-family: Cubano;
-    font-size: 48px;
-    padding: 10px;
-    background: rgba(33, 33, 33, 0.68);
-    border: 1px solid #fff;
-    animation: pulse 4s infinite;
-    margin-bottom: 0;
-    text-align: center; }
+    text-align: center;
+    border: none;
+    font-size: 30px;
+    margin: 20px;
+    color: #4b5f6f;
+    text-align: right; }
+  .skillz a {
+    text-decoration: none; }
+    .skillz a :hover {
+      transition: all 0.5s ease;
+      color: lightcoral; }
 
-@keyframes pulse {
-  0% {
-    background-color: #212121; }
-  100% {
-    background-color: rgba(150, 180, 168, 0.68);
-    color: #212121;
-    border: 1px solid #9BB961; } }
-
-@media screen and (max-width: 768px) {
-  .contactWrap {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 91.4702%;
-    display: inline-block;
-    border: none; }
-    .contactWrap:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 600px) {
-  .contactWrap {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 91.4702%;
-    display: inline-block;
-    border: none; }
-    .contactWrap:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 480px) {
-  .contactWrap {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 91.4702%;
-    display: inline-block;
-    border: none; }
-    .contactWrap:last-child {
-      margin-right: 0; }
-    .contactWrap h2 {
-      font-size: 20px; } }
-
-footer {
+.thrillz {
+  float: left;
   display: block;
-  background: #ccc;
-  width: 100%; }
-
-.navFoot {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%; }
-  .navFoot::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .navFoot ul.iconRightBottom {
-    display: -webkit-inline-box;
-    list-style-type: none;
-    float: left;
-    width: 100%; }
-    .navFoot ul.iconRightBottom a {
-      font-family: Haymaker;
-      color: none;
-      text-decoration: none;
-      background: none; }
-    .navFoot ul.iconRightBottom img {
-      width: 50%;
-      border: 0;
-      height: auto;
-      margin: -3.5px 0px 0px 30px; }
-    .navFoot ul.iconRightBottom li {
-      width: 25%; }
-
-@media screen and (max-width: 768px) {
-  .mainWrap {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto;
-    float: none; }
-    .mainWrap::after {
-      clear: both;
-      content: "";
-      display: table; } }
-
-@media screen and (max-width: 768px) {
-  main {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto;
-    /* background-size: cover; */
-    background-repeat: no-repeat; }
-    main::after {
-      clear: both;
-      content: "";
-      display: table; } }
-
-@media screen and (max-width: 768px) {
-  .About {
-    float: left;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  border: none;
+  background: #fff;
+  height: 20em;
+  margin-bottom: 1em; }
+  .thrillz:last-child {
+    margin-right: 0; }
+  .thrillz .soundcloudWrap {
+    margin: 10px; }
+  .thrillz h2, .thrillz p {
+    color: #4b5f6f; }
+  .thrillz p {
+    font-family: KlinicSlab;
+    padding: 0 10px;
+    font-size: 20px;
+    text-align: right; }
+  .thrillz h2 {
+    font-family: Cubano;
+    text-align: center;
+    border: none;
+    font-size: 30px;
+    margin: 20px;
+    color: #4b5f6f;
+    text-align: right; }
+  .thrillz a {
+    text-decoration: none; }
+    .thrillz a :hover {
+      transition: all 0.5s ease;
+      color: lightcoral; }
+  .thrillz ul {
+    margin-right: 10px;
+    font-size: 18.4px;
     display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .About:last-child {
-      margin-right: 0; }
-    .About p {
-      font-size: 16px; } }
-
-@media screen and (max-width: 768px) {
-  .About2 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    margin-top: 33px; }
-    .About2:last-child {
-      margin-right: 0; }
-    .About2 p {
-      font-size: 26px; } }
-
-@media screen and (max-width: 768px) {
-  .break1 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    height: auto; }
-    .break1:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 768px) {
-  .break2 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    height: auto;
-    padding: 20px; }
-    .break2:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 768px) {
-  .top {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    float: none;
-    box-shadow: none;
-    /* background-size: cover; */
-    background-repeat: no-repeat;
-    box-shadow: none; }
-    .top:last-child {
-      margin-right: 0; }
-    .top h1 {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%;
-      color: rgba(215, 215, 205, 0.8);
-      margin: 20px 0;
-      font-size: 41px;
-      border: 1px solid #212121; }
-      .top h1:last-child {
-        margin-right: 0; } }
-
-@media screen and (max-width: 480px) {
-  .top h1 {
-    margin-left: 0;
-    font-size: 32px;
-    margin-top: 25px; } }
-
-@media screen and (max-width: 768px) {
-  .Resume {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 0;
-    margin-top: 20px;
-    margin-bottom: 20px; }
-    .Resume:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 768px) {
-  .Github {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    margin-left: 8.5298%;
-    border: 1px solid #D7D7CD;
-    background: #343d37; }
-    .Github:last-child {
-      margin-right: 0; }
-    .Github img {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 65.88078%;
-      margin-left: 17.05961%;
-      height: 400px; }
-      .Github img:last-child {
-        margin-right: 0; }
-    .Github ul {
-      max-width: 68em;
-      margin-left: auto;
-      margin-right: auto;
-      list-style-type: none; }
-      .Github ul::after {
-        clear: both;
-        content: "";
-        display: table; }
-      .Github ul a {
-        text-align: center;
-        font-size: 30px; }
-      .Github ul li {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 91.4702%;
-        margin-bottom: 5%; }
-        .Github ul li:last-child {
-          margin-right: 0; }
-        .Github ul li h3 {
-          text-align: center; } }
-
-@media screen and (max-width: 600px) {
-  .Github {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    margin-left: 0%;
-    border: 1px solid #D7D7CD;
-    background: #343d37; }
-    .Github:last-child {
-      margin-right: 0; }
-    .Github ul {
-      max-width: 68em;
-      margin-left: auto;
-      margin-right: auto;
-      list-style-type: none; }
-      .Github ul::after {
-        clear: both;
-        content: "";
-        display: table; }
-      .Github ul a {
-        text-align: center; }
-      .Github ul li {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 91.4702%;
-        margin-bottom: 5%; }
-        .Github ul li:last-child {
-          margin-right: 0; }
-        .Github ul li h3 {
-          text-align: center;
-          margin: 0; } }
-
-@media screen and (max-width: 768px) {
-  .audio {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #D7D7CD;
-    background: #343d37; }
-    .audio:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 768px) {
-  .Contact {
-    margin-left: 8.5298%;
-    margin-top: 20px; }
-    .Contact img {
-      margin-left: 25.58941%; }
-    .Contact h2 {
-      font-size: 34px; }
-    .Contact h6 {
-      font-size: 24px;
-      margin: 20px 10px; } }
-
-@media screen and (max-width: 768px) {
-  .profPic {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    margin-left: 34.11922%;
+    text-align: right;
     margin-top: 0;
-    background-position: 50% 28.5555555%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 70%;
-    width: 31%;
-    height: 100%;
-    margin-right: 20px; }
-    .profPic:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 768px) {
-  .navFoot {
-    width: 100%; }
-    .navFoot ul.iconRightBottom {
-      margin: 0; }
-      .navFoot ul.iconRightBottom img {
-        margin: 0.5px 0px 0px 25px; } }
-
-@media screen and (max-width: 600px) {
-  .navFoot {
-    width: 100%; }
-    .navFoot ul.iconRightBottom {
-      margin: 0; } }
-
-@media screen and (max-width: 480px) {
-  .mainWrap {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto; }
-    .mainWrap::after {
-      clear: both;
-      content: "";
-      display: table; } }
-
-@media screen and (max-width: 480px) {
-  main {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0; }
-    main::after {
-      clear: both;
-      content: "";
-      display: table; } }
-
-@media screen and (max-width: 480px) {
-  .About {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .About:last-child {
-      margin-right: 0; }
-    .About ul {
-      font-size: 14.9px;
-      margin-left: -5px; }
-    .About p {
-      font-size: 14px;
-      padding: 10px 20px;
-      text-align: justify; } }
-
-@media screen and (max-width: 480px) {
-  .About2 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .About2:last-child {
-      margin-right: 0; }
-    .About2 p {
-      font-size: 15px;
-      padding: 10px 20px;
-      text-align: justify; } }
-
-@media screen and (max-width: 480px) {
-  .break1 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    height: auto; }
-    .break1:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 480px) {
-  .break2 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    height: auto; }
-    .break2:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 480px) {
-  .Resume {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    margin-left: 0%;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border: 1px solid #D7D7CD; }
-    .Resume:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 480px) {
-  .Github {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    margin-left: 0%;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border: 1px solid #D7D7CD;
-    background: #343d37; }
-    .Github:last-child {
-      margin-right: 0; }
-    .Github img {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%;
-      margin-left: 0%;
-      height: 300px;
-      width: 100%; }
-      .Github img:last-child {
-        margin-right: 0; }
-    .Github ul {
-      max-width: 68em;
-      margin-left: auto;
-      margin-right: auto;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%;
-      list-style-type: none;
-      margin-left: -20px; }
-      .Github ul::after {
-        clear: both;
-        content: "";
-        display: table; }
-      .Github ul:last-child {
-        margin-right: 0; }
-      .Github ul li {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 100%;
-        margin-left: 0%;
-        margin-left: 0;
-        margin-bottom: 5%; }
-        .Github ul li:last-child {
-          margin-right: 0; }
-        .Github ul li a {
-          border: none;
-          background: none; }
-    .Github .imgDescription {
-      position: absolute;
-      top: 25%;
-      height: 150px;
-      font-size: 30px;
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      visibility: hidden;
-      opacity: 0;
-      text-align: center; } }
-
-@media screen and (max-width: 480px) {
-  .audio {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    margin-left: 0%;
-    border: 1px solid #D7D7CD;
-    background: #343d37; }
-    .audio:last-child {
-      margin-right: 0; }
-    .audio p {
-      font-size: 15px; } }
-
-@media screen and (max-width: 480px) {
-  .Contact h2 {
-    font-size: 23px;
-    text-align: left; }
-  .Contact h6 {
-    font-size: 14px;
-    margin: 20px auto; } }
-
-@media screen and (max-width: 480px) {
-  .profPic {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    margin-left: 25.58941%;
-    margin-top: 10px;
-    background-position: 50% 28.5555555%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    box-shadow: 3px 20px 12px -18px #212121;
-    width: 47.5%;
-    height: 75%;
-    margin-right: 20px; }
-    .profPic:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 480px) {
-  .navFoot {
-    width: 100%; }
-    .navFoot ul.iconRightBottom li {
-      width: 20%; } }
+    list-style-type: none; }
+    .thrillz ul li {
+      font-family: KlinicSlab;
+      color: #4b5f6f; }
